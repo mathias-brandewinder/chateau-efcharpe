@@ -50,7 +50,7 @@ The data is in CSV format. We will use the CSV type
 provider from fsharp.data to access the data.
 *)
 
-#r "../packages/fsharp.data/lib/net40/fsharp.data.dll"
+#r "../packages/FSharp.Data/lib/net40/FSharp.Data.dll"
 open FSharp.Data
 
 [<Literal>]
@@ -147,9 +147,10 @@ the XPlot library, a wrapper over Google Charts, to
 visualize our wine dataset.
 *)
 
-#r "../packages/newtonsoft.json/lib/net45/newtonsoft.json.dll"
-#r "../packages/xplot.googlecharts/lib/net45/xplot.googlecharts.dll"
-#r "../packages/google.datatable.net.wrapper/lib/google.datatable.net.wrapper.dll"
+#I "../packages/Newtonsoft.Json/lib/net45/"
+#I "../packages/Google.DataTable.Net.Wrapper/lib/"
+#r "../packages/XPlot.GoogleCharts/lib/net45/XPlot.GoogleCharts.dll"
+
 open XPlot.GoogleCharts
 
 [ (1.0,5.0); (2.0,7.0); (3.0,3.0); (4.0,10.0) ] 
